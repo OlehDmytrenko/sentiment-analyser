@@ -13,32 +13,35 @@ In the case of an unexpectable language or a prediction is lower than 0.9 output
 The program uses three pre-trained models ([**ukr_infostream_v2.ftz**](https://drive.google.com/file/d/1LPtmOzk-12IEylFmzR6BYWcle2-QcTmD/view?usp=sharing), [**rus_infostream.ftz**](https://drive.google.com/file/d/1tDu_S1HQP6X66ZhsEArbC05ZdIaxLC_5/view?usp=sharing) and [**eng_infostream_v2.ftz**](https://drive.google.com/file/d/1jgaD0p5i43aXG6IVEWAee-Arhglf0BqL/view?usp=sharing) for Ukrainian, Russian and English language, accordingly) that ontained with applying an open-source Python library [FastText](https://fasttext.cc/).
 
 In order to train a text classifier using the [FastText](https://fasttext.cc/), the `fasttext.train_supervised` function with the following hyperparameters was used:
-			hyper_params = { 
-				"lr": 0.35,         # Learning rate
-				"epoch": 100,       # Number of training epochs to train for
-				"wordNgrams": 3,    # Number of word n-grams to consider during training
-				"dim": 155,         # Size of word vectors
-				"ws": 5,            # Size of the context window for CBOW or skip-gram
-				"minn": 3,          # Min length of char ngram
-				"maxn": 20,          # Max length of char ngram
-				"bucket": 2014846,  # Number of buckets
+
+		hyper_params = { 
+			"lr": 0.35,         # Learning rate
+			"epoch": 100,       # Number of training epochs to train for
+			"wordNgrams": 3,    # Number of word n-grams to consider during training
+			"dim": 155,         # Size of word vectors
+			"ws": 5,            # Size of the context window for CBOW or skip-gram
+			"minn": 3,          # Min length of char ngram
+			"maxn": 20,          # Max length of char ngram
+			"bucket": 2014846,  # Number of buckets
 			}
 		
 A  text file `traindata_lang.txt` contained a training sentence per line along with the labels prefixed by the string `__label__` (`__label__pos` or `__label__neg`) were used.
 
 In order to compress and have a much smaller model file and, as a result, reduce space usage, obtained models were quantized and saved in `.ftz` format.
 To quantize and compress model, the `quantize` function with the following parameters was used:
-			model.quantize(input=None,
-							  qout=False,
-							  cutoff=0,
-							  retrain=False,
-							  epoch=None,
-							  lr=None,
-							  thread=None,
-							  verbose=None,
-							  dsub=2,
-							  qnorm=False,
-							 )
+
+		model.quantize(
+			input=None,
+			qout=False,
+			cutoff=0,
+			retrain=False,
+			epoch=None,
+			lr=None,
+			thread=None,
+			verbose=None,
+			dsub=2,
+			qnorm=False,
+			)
 
 - [**ukr_infostream_v2.ftz**](https://drive.google.com/file/d/1LPtmOzk-12IEylFmzR6BYWcle2-QcTmD/view?usp=sharing) is model trained on the `traindata_ukr.txt` containing 260000 Ukrainian messages per line along with the `__label__pos` or `__label__neg` labels.
 - [**rus_infostream.ftz**](https://drive.google.com/file/d/1tDu_S1HQP6X66ZhsEArbC05ZdIaxLC_5/view?usp=sharing) is model trained on the `traindata_rus.txt` containing 260000 Russian messages per line along with the `__label__pos` or `__label__neg` labels.
