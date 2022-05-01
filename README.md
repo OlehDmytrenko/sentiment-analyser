@@ -10,7 +10,7 @@ In the case of an unexpectable language or a prediction is lower than 0.9 output
 
 ## Models
 
-The program uses three pre-trained models ([**ukr_infostream_v2.ftz**](https://drive.google.com/file/d/1LPtmOzk-12IEylFmzR6BYWcle2-QcTmD/view?usp=sharing), [**rus_infostream.ftz**](https://drive.google.com/file/d/1tDu_S1HQP6X66ZhsEArbC05ZdIaxLC_5/view?usp=sharing) and [**eng_infostream_v2.ftz**](https://drive.google.com/file/d/1jgaD0p5i43aXG6IVEWAee-Arhglf0BqL/view?usp=sharing) for Ukrainian, Russian and English language, accordingly) that ontained with applying an open-source Python library [FastText](https://fasttext.cc/).
+The program uses three pre-trained models ([**ukr_infostream_v2.ftz**](https://drive.google.com/file/d/1njXnzZF6A7Zv4BELJdgDE0cwZHZgQwtZ/view?usp=sharing), [**rus_infostream.ftz**](https://drive.google.com/file/d/1dW-3eyDXQvS4PFx9uPI9bXs7metFVsZ4/view?usp=sharing) and [**eng_infostream_v2.ftz**](https://drive.google.com/file/d/1ugBnDWHrzZV7AmejnS-OPoiGqrhy53Zn/view?usp=sharing) for Ukrainian, Russian and English language, accordingly) that ontained with applying an open-source Python library [FastText](https://fasttext.cc/).
 
 In order to train a text classifier using the [FastText](https://fasttext.cc/), the `fasttext.train_supervised` function with the following hyperparameters was used:
 
@@ -43,9 +43,9 @@ To quantize and compress model, the `quantize` function with the following param
 			qnorm=False,
 			)
 
-- [**ukr_infostream_v2.ftz**](https://drive.google.com/file/d/1LPtmOzk-12IEylFmzR6BYWcle2-QcTmD/view?usp=sharing) is model trained on the `traindata_ukr.txt` containing 260000 Ukrainian messages per line along with the `__label__pos` or `__label__neg` labels.
-- [**rus_infostream.ftz**](https://drive.google.com/file/d/1tDu_S1HQP6X66ZhsEArbC05ZdIaxLC_5/view?usp=sharing) is model trained on the `traindata_rus.txt` containing 260000 Russian messages per line along with the `__label__pos` or `__label__neg` labels.
-- [**eng_infostream_v2.ftz**](https://drive.google.com/file/d/1jgaD0p5i43aXG6IVEWAee-Arhglf0BqL/view?usp=sharing) is model trained on the `traindata_eng.txt` containing 300000 English messages per line along with the `__label__pos` or `__label__neg` labels.
+- [**ukr_infostream_v2.ftz**](https://drive.google.com/file/d/1njXnzZF6A7Zv4BELJdgDE0cwZHZgQwtZ/view?usp=sharing) is model trained on the `traindata_ukr.txt` containing 260000 Ukrainian messages per line along with the `__label__pos` or `__label__neg` labels.
+- [**rus_infostream.ftz**](https://drive.google.com/file/d/1dW-3eyDXQvS4PFx9uPI9bXs7metFVsZ4/view?usp=sharing) is model trained on the `traindata_rus.txt` containing 260000 Russian messages per line along with the `__label__pos` or `__label__neg` labels.
+- [**eng_infostream_v2.ftz**](https://drive.google.com/file/d/1ugBnDWHrzZV7AmejnS-OPoiGqrhy53Zn/view?usp=sharing) is model trained on the `traindata_eng.txt` containing 300000 English messages per line along with the `__label__pos` or `__label__neg` labels.
 
 The pre-labeled messages were obtained with the help of the news monitoring system - [InfoStream](http://infostream.ua/ENG/).
 Labels of these messages obtained as result of [dictionary-based classification](https://arxiv.org/abs/0806.2738).
@@ -55,7 +55,7 @@ To collect the training data, the messages with extremely high emotional weights
 To run the `sentiment_analyzer.py` script you will need:
 - python 3.8 or newer
 - to install [fastText-0.9.2](https://pypi.org/project/fasttext/)
-- to create the folder `Models` in the root folder, download and unpack there pre-trained models [**ukr_infostream_v2.ftz**](https://drive.google.com/file/d/1LPtmOzk-12IEylFmzR6BYWcle2-QcTmD/view?usp=sharing), [**rus_infostream.ftz**](https://drive.google.com/file/d/1tDu_S1HQP6X66ZhsEArbC05ZdIaxLC_5/view?usp=sharing) and [**eng_infostream_v2.ftz**](https://drive.google.com/file/d/1jgaD0p5i43aXG6IVEWAee-Arhglf0BqL/view?usp=sharing) for Ukrainian, Russian and English language, accordingly
+- to create the folder `Models` in the root folder, download and unpack there pre-trained models [**ukr_infostream_v2.ftz**](https://drive.google.com/file/d/1njXnzZF6A7Zv4BELJdgDE0cwZHZgQwtZ/view?usp=sharing), [**rus_infostream.ftz**](https://drive.google.com/file/d/1dW-3eyDXQvS4PFx9uPI9bXs7metFVsZ4/view?usp=sharing) and [**eng_infostream_v2.ftz**](https://drive.google.com/file/d/1ugBnDWHrzZV7AmejnS-OPoiGqrhy53Zn/view?usp=sharing) for Ukrainian, Russian and English language, accordingly
 
 ## Copyright
 Copyright © 2021 [Dmytro Lande](http://dwl.kiev.ua/), [Oleh Dmytrenko](http://odmytrenko.tilda.ws/)

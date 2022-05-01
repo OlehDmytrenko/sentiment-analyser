@@ -1,0 +1,11 @@
+{"langModels" : [
+	{"uk" : "uk.ftz"},
+	{"ru" : "ru.ftz"},
+   	{"en" : "en.ftz"}
+	],
+
+"minTextLength" : "3",
+"maxTextLength" : "2000",
+"predictLimit" : "0.9"
+
+}
