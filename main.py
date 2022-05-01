@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 The program for sentiment analysis of text content.
@@ -27,16 +28,15 @@ langModels = configLoader.load_default_languages(os.getcwd())
 models = modelsLoader.load_models(os.getcwd(), langModels)
 
 if __name__ == "__main__":
-    try:
-        text = sys.argv[1]
-        lang = sys.argv[2] #format of input languale is "uk", "ru" or "en"
-    except:
-        text = input()
-        lang = input() 
+        try:
+            text = sys.argv[1]
+            lang = sys.argv[2] #format of input languale is "uk", "ru" or "en"
+        except:
+            print ("¯\_(ツ)_/¯ Error input text data or language!")
+            #text = input()
+            #lang = input()
     
+        sentimentAnalyser.predict_emotion(text, models[lang], configLoader.default_value(os.getcwd(), "predictLimit"))
     
-    
-    predictLimit = 0.9
-    emotion = sentimentAnalyser.emotion(text, models[lang], predictLimit)
-    print (emotion)
-    
+print ("\n ツ You are lucky! The program successfully finished!\n")
+print (time.time() - t0)

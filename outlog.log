@@ -1,54 +1,26 @@
 'os' already in sys.modules
 'fasttext' already in sys.modules
-'time' already in sys.modules
-'sys' already in sys.modules
-'subprocess' already in sys.modules
+ents/GitHub/sentiment-analyser/models/uk.ftz
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+<<fasttext.FastText._FastText object at 0x7fd29023cca0>> quantized model successfully loaded!
+
+Loading <ru.ftz> quantized model ...
+
+/Users/dmytrenko.o/Documents/GitHub/sentiment-analyser/models/ru.ftz
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+<<fasttext.FastText._FastText object at 0x7fd290259eb0>> quantized model successfully loaded!
+
+Loading <en.ftz> quantized model ...
+
+/Users/dmytrenko.o/Documents/GitHub/sentiment-analyser/models/en.ftz
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+<<fasttext.FastText._FastText object at 0x7fd290259a60>> quantized model successfully loaded!
+
+
+ ツ You are lucky! The program successfully finished!
+
+5.349141836166382
 'os' already in sys.modules
-'io' already in sys.modules
+'fasttext' has been imported
 'time' already in sys.modules
-'tempfile' already in sys.modules
-'zipfile' already in sys.modules
-'requests' has been imported
-'codecs' already in sys.modules
-'csv' already in sys.modules
-Can't find the 'scipy' module
-Collecting scipy
-  Using cached scipy-1.8.0-cp39-cp39-macosx_12_0_universal2.macosx_10_9_x86_64.whl (55.6 MB)
-Collecting numpy<1.25.0,>=1.17.3
-  Downloading numpy-1.22.3-cp39-cp39-macosx_10_14_x86_64.whl (17.6 MB)
-Installing collected packages: numpy, scipy
-Successfully installed numpy-1.22.3 scipy-1.8.0
-Can't find the 'moviepy' module
-Collecting moviepy
-  Using cached moviepy-1.0.3-py3-none-any.whl
-Collecting imageio<3.0,>=2.5
-  Downloading imageio-2.18.0-py3-none-any.whl (3.4 MB)
-Collecting imageio-ffmpeg>=0.2.0
-  Downloading imageio_ffmpeg-0.4.7-py3-none-macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (22.5 MB)
-Collecting decorator<5.0,>=4.0.2
-  Using cached decorator-4.4.2-py2.py3-none-any.whl (9.2 kB)
-Requirement already satisfied: numpy>=1.17.3 in /Users/dmytrenko.o/opt/anaconda3/envs/spyder-5.1.5/lib/python3.9/site-packages (from moviepy) (1.22.3)
-Requirement already satisfied: requests<3.0,>=2.8.1 in /Users/dmytrenko.o/opt/anaconda3/envs/spyder-5.1.5/lib/python3.9/site-packages (from moviepy) (2.27.1)
-Collecting proglog<=1.0.0
-  Using cached proglog-0.1.9-py3-none-any.whl
-Collecting tqdm<5.0,>=4.11.2
-  Downloading tqdm-4.64.0-py2.py3-none-any.whl (78 kB)
-Collecting pillow>=8.3.2
-  Downloading Pillow-9.1.0-cp39-cp39-macosx_10_9_x86_64.whl (3.1 MB)
-Requirement already satisfied: urllib3<1.27,>=1.21.1 in /Users/dmytrenko.o/opt/anaconda3/envs/spyder-5.1.5/lib/python3.9/site-packages (from requests<3.0,>=2.8.1->moviepy) (1.26.9)
-Requirement already satisfied: idna<4,>=2.5 in /Users/dmytrenko.o/opt/anaconda3/envs/spyder-5.1.5/lib/python3.9/site-packages (from requests<3.0,>=2.8.1->moviepy) (3.3)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /Users/dmytrenko.o/opt/anaconda3/envs/spyder-5.1.5/lib/python3.9/site-packages (from requests<3.0,>=2.8.1->moviepy) (2.0.4)
-Requirement already satisfied: certifi>=2017.4.17 in /Users/dmytrenko.o/opt/anaconda3/envs/spyder-5.1.5/lib/python3.9/site-packages (from requests<3.0,>=2.8.1->moviepy) (2021.10.8)
-Installing collected packages: tqdm, pillow, proglog, imageio-ffmpeg, imageio, decorator, moviepy
-  Attempting uninstall: decorator
-    Found existing installation: decorator 5.1.1
-    Uninstalling decorator-5.1.1:
-      Successfully uninstalled decorator-5.1.1
-Successfully installed decorator-4.4.2 imageio-2.18.0 imageio-ffmpeg-0.4.7 moviepy-1.0.3 pillow-9.1.0 proglog-0.1.9 tqdm-4.64.0
-Can't find the 'vosk' module
-Collecting vosk
-  Using cached vosk-0.3.32-py3-none-macosx_10_6_x86_64.whl (2.1 MB)
-Requirement already satisfied: cffi>=1.0 in /Users/dmytrenko.o/opt/anaconda3/envs/spyder-5.1.5/lib/python3.9/site-packages (from vosk) (1.15.0)
-Requirement already satisfied: pycparser in /Users/dmytrenko.o/opt/anaconda3/envs/spyder-5.1.5/lib/python3.9/site-packages (from cffi>=1.0->vosk) (2.21)
-Installing collected packages: vosk
-Successfully installed vosk-0.3.32
+'json' has been imported
