@@ -15,19 +15,21 @@ def dir_below():
     dirBelow = os.path.abspath(os.curdir).replace(curFolder, "")
     return dirBelow
 
-def default_int_value(configPath, key):
+def default_value(configPath, key):
     try:
-        with open("config.json", "r") as configFile:
+        with open(configPath+"/config.json", "r") as configFile:
             jsonConfig = json.load(configFile)
-            messageLength = int(jsonConfig[key])
+            value = float(jsonConfig[key])
             configFile.close()
     except:
-        print ("¯\_(ツ)_/¯ Error! Max Messages Length can't be reading! Please, check a key {0} in config.json".format(key))
-    return messageLength
+        print ("¯\_(ツ)_/¯ Error! Value can't be reading! Please, check a key {0} in config.json".format(key))
+        value = 0.9
+        pass
+    return value
 
 def load_default_languages(configPath):
     try:
-        with open("config.json", "r") as configFile:
+        with open(configPath+"/config.json", "r") as configFile:
             jsonConfig = json.load(configFile)
             try:
                 langModels = {list(langModel.keys())[0] : langModel[list(langModel.keys())[0]]

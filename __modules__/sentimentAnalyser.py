@@ -12,16 +12,25 @@ sys.stderr = stdOutput
 sys.stdout = stdOutput
 
 
-def emotion(text, model, predictLimit):
+def predict_emotion(text, model, predictLimit):
     try:
         predict = model.predict(text)
         if (predict[0][0] == '__label__pos') and (predict[1][0] >= predictLimit):
-            emotion = "Good"
+            sys.stdout = sys.__stdout__
+            print ("Good")
+            sys.stdout = stdOutput
         elif (predict[0][0] == '__label__neg') and (predict[1][0] >= predictLimit):
-            emotion = "Bad" 
+            sys.stdout = sys.__stdout__
+            print ("Bad" )
+            sys.stdout = stdOutput
         else:
-            emotion = None
+            sys.stdout = sys.__stdout__
+            print (None)
+            sys.stdout = stdOutput
     except:
-        print ("Unexpectable language!")
-        emotion = None
-    return emotion
+        sys.stdout = sys.__stdout__
+        print (None)
+        sys.stdout = stdOutput
+        print ("¯\_(ツ)_/¯ Unexpectable Error while emotion predicting!")  
+        pass
+    return
